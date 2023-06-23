@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+src/OpenAI.PlugIn.NETSample/bin/*
+src/OpenAI.PlugIn.NETSample/obj/*
