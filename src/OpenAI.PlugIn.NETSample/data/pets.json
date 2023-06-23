@@ -1,0 +1,67 @@
+[
+    {
+        "name": "Ace",
+        "type": "dog",
+        "breed": "Mixed",
+        "age": 1,
+        "color": "golden",
+        "weight": 30,
+        "owner": {
+            "name": "Bruno Capuano",
+            "email": "bruno@elbruno.com",
+            "phone": "+1-555-123-4567"
+        }
+    },
+    {
+        "name": "Goku",
+        "type": "cat",
+        "breed": "Calico",
+        "age": 4,
+        "color": "gray",
+        "weight": 8,
+        "owner": {
+            "name": "Bruno Capuano",
+            "email": "bruno@elbruno.com",
+            "phone": "+1-555-123-4567"
+        }
+    },    
+    {
+        "name": "Max",
+        "type": "dog",
+        "breed": "Golden Retriever",
+        "age": 4,
+        "color": "golden",
+        "weight": 30,
+        "owner": {
+            "name": "John Doe",
+            "email": "johndoe@example.com",
+            "phone": "+1-555-123-4567"
+        }
+    },
+    {
+        "name": "Whiskers",
+        "type": "cat",
+        "breed": "Persian",
+        "age": 2,
+        "color": "white",
+        "weight": 8,
+        "owner": {
+            "name": "Jane Smith",
+            "email": "janesmith@example.com",
+            "phone": "+1-555-987-6543"
+        }
+    },
+    {
+        "name": "Buddy",
+        "type": "dog",
+        "breed": "Labrador Retriever",
+        "age": 6,
+        "color": "black",
+        "weight": 35,
+        "owner": {
+            "name": "Michael Johnson",
+            "email": "michael@example.com",
+            "phone": "+1-555-234-5678"
+        }
+    }
+]

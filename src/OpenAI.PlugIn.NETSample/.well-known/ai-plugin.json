@@ -1,9 +1,9 @@
 {
   "schema_version": "v1",
-  "name_for_human": "Weather Plugin",
-  "name_for_model": "weather",
-  "description_for_human": "Plugin for getting current weather information for a given city name.",
-  "description_for_model": "Plugin for getting current weather information for a given city name.",
+  "name_for_human": "El Bruno Pet Search",
+  "name_for_model": "elbrunopets",
+  "description_for_human": "Search through El Bruno's wide range of pets and pets' owners.",
+  "description_for_model": "Plugin for searching through El Bruno's pets. Use it whenever a user asks about pets or pets'owners.",
   "auth": {
     "type": "none"
   },
