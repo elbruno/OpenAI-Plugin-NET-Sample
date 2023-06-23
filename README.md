@@ -10,7 +10,6 @@ To gain access to ChatGPT plugins, [join waitlist here](https://openai.com/waitl
 
 
 [![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=lightgrey&logo=github)](https://codespaces.new/elbruno/OpenAI-Plugin-NET-Sample)
-[![Open in Dev Container](https://img.shields.io/static/v1?style=for-the-badge&label=Dev+Container&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/elbruno/OpenAI-Plugin-NET-Sample)
 
 ## Getting started
 
@@ -29,9 +28,21 @@ To gain access to ChatGPT plugins, [join waitlist here](https://openai.com/waitl
 
     [![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=lightgrey&logo=github)](https://codespaces.new/elbruno/OpenAI-Plugin-NET-Sample)
 
+1. This action may take a couple of minutes. Once the Codespaces is initialized, check the Extensions tab and check that all extensions are installed.
+
+    **ToDo ADD IMAGE** 
+
+1. Using the  the ***Explorer*** option, open the file `src/OpenAI.PlugIn.NETSample/Program.cs`.
+
+    **ToDo ADD IMAGE** 
+
+1. Using the  the ***Run and Debug*** option, run the program. Select "C# as the run option".
+
+    **ToDo ADD IMAGE** 
+
 1. Open Codespaces Ports tab, right click 8000, and make it public.
 
-**ToDo ADD IMAGE** 
+    **ToDo ADD IMAGE** 
 
 1. Copy the Codesapces address for port 8000
 1. Open Chat GPT and add the plugin with the Codespaces address
