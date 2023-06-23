@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\OpenAI.PlugIn.NETSample.props" />
+</Project>

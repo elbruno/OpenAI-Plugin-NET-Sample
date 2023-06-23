@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "xYrJHgyizxrMlLL0E6H+G+drjiq3HkjNamYTjc1I4/Nqni6acayWo/U5mftpcRSBM2b6419EPbs9jz07Cz6zOw==",
+  "success": true,
+  "projectFilePath": "c:\\src\\labs\\openai-plugin-net\\src\\OpenAI.PlugIn.NETSample\\OpenAI.PlugIn.NETSample.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\brunocapuano\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.0\\microsoft.aspnetcore.openapi.7.0.0.nupkg.sha512",
+    "C:\\Users\\brunocapuano\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\brunocapuano\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\brunocapuano\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\brunocapuano\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\brunocapuano\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\brunocapuano\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
