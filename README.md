@@ -4,14 +4,9 @@ _Create, customize and deploy your own ChatGPT PlugIn in minutes._ ✨
 
 This is a quickstart for sample for creating [ChatGPT Plugin](https://openai.com/blog/chatgpt-plugins) programing in NET, using GitHub Codespaces, VS Code, and Azure. 
 
-**REVIEW** The sample includes templates to deploy the plugin to [Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/) using the [Azure Developer CLI](https://aka.ms/azd/install). 
-
 To gain access to ChatGPT plugins, [join waitlist here](https://openai.com/waitlist/plugins)!
 
-
-[![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=lightgrey&logo=github)](https://codespaces.new/elbruno/OpenAI-Plugin-NET-Sample)
-
-## Getting started
+## Getting started (coming soon!)
 
 1. **📤 One-click setup**: [Open a new Codespace](https://codespaces.new/azure-samples/openai-plugin-fastapi), giving you a fully configured cloud developer environment.
 2. **🪄 Make an API**: Add routes in `src/OpenAI.PlugIn.NETSample/Program.cs`. Check [Route Handlers in Minimal API apps](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/route-handlers?view=aspnetcore-7.0) for more information.
@@ -43,7 +38,7 @@ To gain access to ChatGPT plugins, [join waitlist here](https://openai.com/waitl
 
 
 
-## Run in Codespaces (Work in Progress)
+## Run in Codespaces (Coming Soon!)
 1. Click here to open in GitHub Codespaces
 
     [![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=lightgrey&logo=github)](https://codespaces.new/elbruno/OpenAI-Plugin-NET-Sample)
@@ -64,7 +59,7 @@ To gain access to ChatGPT plugins, [join waitlist here](https://openai.com/waitl
 
     **ToDo ADD IMAGE** 
 
-1. Copy the Codesapces address for port 8000
+1. Copy the Codespaces address for port 8000
 1. Open Chat GPT and add the plugin with the Codespaces address
 1. Run one of the following queries 
     1. *How many cats are in the catalog?*
