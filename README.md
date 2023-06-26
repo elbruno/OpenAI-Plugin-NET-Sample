@@ -19,11 +19,31 @@ To gain access to ChatGPT plugins, [join waitlist here](https://openai.com/waitl
 4. **💬 Test in ChatGPT**: Copy the URL (make sure its public) and paste it in ChatGPT's [Develop your own plugin](https://platform.openai.com/docs/plugins/getting-started/debugging) flow.
 5. **🔄 Iterate quickly:** Codespaces updates the server on each save, and VS Code's debugger lets you dig into the code execution.
 
+## Run Local
+1. Open `src/OpenAI.PlugIn.NETSample/Program.cs`. Press [F5] To Start Debugging. Choose your prefered Debugger.
+1. Once the project is compiled, the app should be running. A new browser will open with the URL [http://localhost:5100/swagger/index.html].
+    ![Run and Debug App](/images/01RunandDebugApp.png "Run and Debug App")
+
+1. Open ChatGPT. Select `GPT-4`, open the PlugIn Options. Open the PlugIn Store and select [Develop your own plugin]
+    ![Develop your own plugin in PlugIn Store](/images/02chatgptpluginstore.png "Develop your own plugin in PlugIn Store")
+
+1. Type [http://localhost:5100], and select [Find Manifest File]. ChatGPT will search for the manifest file at [http://localhost:5100/.well-known/ai-plugin.json] and load the plugin information. Select [Install LocalHost PlugIn]
+    ![Test plugin manifest information found](/images/03foundpluginforlocalstore.png "Test plugin manifest information found")
+
+1. The PlugIn will now be enabled in ChatGPT
+    ![Test plugin installed](/images/04plugininstalled.png "Test plugin installed")
+
+1. We can now test the plug in. ChatGPT will use the Pet plugin for pets related questions
+    1. Sample Question, "Who owns the oldest Pet?"
+    ![Who owns the oldest pet?](/images/05oldestpets.png "Who owns the oldest pet?")
+    
+    1. Sample Question, "Who has more than one pet?"
+    ![Who has more than one pet?](/images/06morethan1pet.png "Who has more than one pet?")
 
 
-## Run
 
-### Run in Codespaces
+
+## Run in Codespaces (Work in Progress)
 1. Click here to open in GitHub Codespaces
 
     [![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=lightgrey&logo=github)](https://codespaces.new/elbruno/OpenAI-Plugin-NET-Sample)
