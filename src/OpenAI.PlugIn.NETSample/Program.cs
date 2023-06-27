@@ -8,11 +8,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
+    options.AddPolicy("AllowLocalHost", policy =>
+    {
+        policy.WithOrigins("https://chat.openai.com", "http://localhost:5100").AllowAnyHeader().AllowAnyMethod();
+    });
+    options.AddPolicy("AllowCodespaces", policy =>
     {
         policy.WithOrigins("https://chat.openai.com", "http://localhost:5100").AllowAnyHeader().AllowAnyMethod();
     });
 });
+
+// log the current url
+Console.WriteLine("Current Url: " + builder.Environment.WebRootPath);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
