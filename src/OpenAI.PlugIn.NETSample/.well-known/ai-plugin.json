@@ -9,10 +9,10 @@
   },
   "api": {
     "type": "openapi",
-    "url": "http://localhost:5100/swagger/v1/swagger.yaml",
+    "url": "$host/swagger/v1/swagger.yaml",
     "is_user_authenticated": false
   },
-  "logo_url": "http://localhost:5100/.well-known/logo.png",
+  "logo_url": "$host/.well-known/logo.png",
   "contact_email": "support@example.com",
   "legal_info_url": "http://www.example.com/legal"
 }
