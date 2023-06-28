@@ -68,7 +68,7 @@
           "*.razor": "${capture}.razor.cs,${capture}.razor.css"
         }
       }
-    }
+    },
     "codespaces": {
       "openFiles": [
         "src/OpenAI.PlugIn.NETSample/Program.cs",
