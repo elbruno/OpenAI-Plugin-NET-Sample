@@ -1,3 +1,13 @@
 {
-    "dotnet.defaultSolution": "src\\OpenAI.PlugIn.sln"
+    "dotnet.defaultSolution": "src\\OpenAI.PlugIn.sln",
+    "dotnet.enablePackageRestore": true,
+    "dotnet.useEditorCompletions": true,
+    "dotnet.useGlobalJson": true,
+    "dotnet.useLegacySdkResolver": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.suggestSelection": "first",
+    "editor.wordBasedSuggestions": false,
+    "editor.snippetSuggestions": "top",
 }

@@ -18,7 +18,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-// log the current url
+// work in progress, trying to figure out how to get the published url
 Console.WriteLine("Current Url: " + builder.Environment.WebRootPath);
 
 builder.Services.AddEndpointsApiExplorer();
