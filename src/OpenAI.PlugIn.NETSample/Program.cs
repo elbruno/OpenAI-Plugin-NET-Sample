@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowLocalHost", policy =>
+    options.AddPolicy("AllowAll", policy =>
     {
         policy.WithOrigins("https://chat.openai.com", "http://localhost:5100").AllowAnyHeader().AllowAnyMethod();
     });
@@ -39,13 +39,30 @@ app.UseSwaggerUI(options =>
     options.SwaggerEndpoint("/swagger/v1/swagger.yaml", "ElBruno.Pets v1");
 });
 
-// necessary public files for ChatGPT to get plugin information
+// necessary public files for ChatGPT to get plugin logo
 app.UseStaticFiles(new StaticFileOptions
 {
-    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), ".well-known")),
-    RequestPath = "/.well-known"
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "pluginInfo")),
+    RequestPath = "/pluginInfo"
 });
 
+// publish the plugin manifest information, update the host with the current one
+app.MapGet("/.well-known/ai-plugin.json", () =>
+{
+    using var httpClient = new HttpClient();
+    var serverUrl = app.Urls.First();
+    string aiPlugInManifest = File.ReadAllText("pluginInfo/ai-plugin.json");
+    aiPlugInManifest = aiPlugInManifest.Replace("$host", serverUrl);
+    return Results.Json(aiPlugInManifest);
+})
+.WithName(".well-known/ai-plugin.json")
+.WithOpenApi(generatedOperation =>
+{
+    generatedOperation.Description = "Gets the plugin manifest information.";
+    return generatedOperation;
+});
+
+// return the list of pets
 app.MapGet("/pets", () =>
 {
     using var httpClient = new HttpClient();
