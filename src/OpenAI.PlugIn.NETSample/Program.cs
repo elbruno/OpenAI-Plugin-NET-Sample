@@ -49,7 +49,7 @@ app.UseStaticFiles(new StaticFileOptions
 // publish the plugin manifest information, update the host with the current one
 app.MapGet("/.well-known/ai-plugin.json", (HttpRequest request) =>
 {
-    // get current url from request headers
+    // get current url from request headers (codespaces dev) or app Urls (local dev)
     var userAgent = request.Headers.UserAgent;
     var customHeader = request.Headers["x-custom-header"];
     var currentUrl = request.Headers["x-forwarded-proto"] + "://" + request.Headers["x-forwarded-host"];
