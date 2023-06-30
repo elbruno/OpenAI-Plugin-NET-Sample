@@ -61,7 +61,8 @@ app.MapGet("/.well-known/ai-plugin.json", (HttpRequest request) =>
     string aiPlugInManifest = File.ReadAllText("pluginInfo/ai-plugin.json");
     aiPlugInManifest = aiPlugInManifest.Replace("$host", currentUrl);
     return Results.Text(aiPlugInManifest);
-});
+})
+.ExcludeFromDescription(); // exclude from swagger description;
 
 // return the list of pets
 app.MapGet("/pets", () =>
