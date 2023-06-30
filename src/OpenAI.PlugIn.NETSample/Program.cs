@@ -1,4 +1,5 @@
 using Microsoft.Extensions.FileProviders;
+using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using System.Dynamic;
 using System.Net.Http;
@@ -59,19 +60,12 @@ app.MapGet("/.well-known/ai-plugin.json", (HttpRequest request) =>
     // update current host in manifest
     string aiPlugInManifest = File.ReadAllText("pluginInfo/ai-plugin.json");
     aiPlugInManifest = aiPlugInManifest.Replace("$host", currentUrl);
-    return Results.Json(aiPlugInManifest);
-})
-.WithName(".well-known/ai-plugin.json")
-.WithOpenApi(generatedOperation =>
-{
-    generatedOperation.Description = "Gets the plugin manifest information.";
-    return generatedOperation;
+    return Results.Text(aiPlugInManifest);
 });
 
 // return the list of pets
 app.MapGet("/pets", () =>
 {
-    using var httpClient = new HttpClient();
     var petsFile = File.ReadAllText("data/pets.json");
     return Results.Json(petsFile);
 })
@@ -82,4 +76,86 @@ app.MapGet("/pets", () =>
     return generatedOperation;
 });
 
+// add a new pet
+app.MapPut("/petadd", (string name, string type, string breed, int age, string color, int weight, string owner_name, string owner_email, string owner_phone) =>
+{
+    var petsFile = File.ReadAllText("data/pets.json");
+
+    // deserialize the json file using root class
+    var pets = JsonSerializer.Deserialize<List<Root>>(petsFile);
+
+    // create a new pet object
+    var newPet = new Root
+    {
+        name = name,
+        type = type,
+        breed = breed,
+        age = age,
+        color = color,
+        weight = weight,
+        owner = new Owner
+        {
+            name = owner_name,
+            email = owner_email,
+            phone = owner_phone
+        }
+    };
+
+    // add the pet to the list
+    pets.Add(newPet);
+
+    // save the list back to the json file
+    petsFile = JsonSerializer.Serialize(pets);
+    File.WriteAllText("data/pets.json", petsFile);
+
+    // return sucessful operation
+    return Results.Ok();
+})
+.WithName("PetAdd")
+.WithOpenApi(generatedOperation =>
+{
+
+    // generate operation parameters based on (string name, string type, string breed, int age, string color, int weight, string owner_name, string owner_email, string owner_phone)
+
+    var parameter = generatedOperation.Parameters[0];
+    parameter.Description = "The name of the Pet";
+    parameter = generatedOperation.Parameters[1];
+    parameter.Description = "The type of the Pet";
+    parameter = generatedOperation.Parameters[2];
+    parameter.Description = "The breed of the Pet";
+    parameter = generatedOperation.Parameters[3];
+    parameter.Description = "The age of the Pet";
+    parameter = generatedOperation.Parameters[4];
+    parameter.Description = "The color of the Pet";
+    parameter = generatedOperation.Parameters[5];
+    parameter.Description = "The weight of the Pet";
+    parameter = generatedOperation.Parameters[6];
+    parameter.Description = "The Pet's owner name";
+    parameter = generatedOperation.Parameters[7];
+    parameter.Description = "The Pet's owner email";
+    parameter = generatedOperation.Parameters[8];
+    parameter.Description = "The Pet's owner phone";
+
+    generatedOperation.Description = "Add a new pet to the pet catalog available in El Bruno's Pet catalog.";
+    return generatedOperation;
+});
+
 app.Run();
+
+public class Owner
+{
+    public string name { get; set; }
+    public string email { get; set; }
+    public string phone { get; set; }
+}
+
+public class Root
+{
+    public string name { get; set; }
+    public string type { get; set; }
+    public string breed { get; set; }
+    public int age { get; set; }
+    public string color { get; set; }
+    public int weight { get; set; }
+    public Owner owner { get; set; }
+}
