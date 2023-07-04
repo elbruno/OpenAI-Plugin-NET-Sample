@@ -36,6 +36,14 @@ To gain access to ChatGPT plugins, [join waitlist here](https://openai.com/waitl
     ![Who has more than one pet?](/images/06morethan1pet.png "Who has more than one pet?")
 
 
+## Test in ChatGPT
+
+You can use the following prompts to test the plugin in ChatGPT:
+
+- How many cats are in the db?
+- List the cat names in the catalog
+- What info is needed to add a new pet?
+- OK, let's add a new pet. His name is Net, is a calico breed, 17-year-old brown cat. He weighs 3 kilograms. His owner is Bruno Capuano, with the same owner information that you have in the database.
 
 
 ## Run in Codespaces (Coming Soon!)
