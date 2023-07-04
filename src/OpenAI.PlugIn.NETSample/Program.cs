@@ -50,6 +50,7 @@ app.UseStaticFiles(new StaticFileOptions
 // publish the plugin manifest information, update the host with the current one
 app.MapGet("/.well-known/ai-plugin.json", (HttpRequest request) =>
 {
+    Console.WriteLine($"GET PLUGIN MANIFEST");
     // get current url from request headers (codespaces dev) or app Urls (local dev)
     var userAgent = request.Headers.UserAgent;
     var customHeader = request.Headers["x-custom-header"];
@@ -65,12 +66,13 @@ app.MapGet("/.well-known/ai-plugin.json", (HttpRequest request) =>
 .ExcludeFromDescription(); // exclude from swagger description;
 
 // return the list of pets
-app.MapGet("/pets", () =>
+app.MapGet("/getallpets", () =>
 {
+    Console.WriteLine("GET ALL PETS");
     var petsFile = File.ReadAllText("data/pets.json");
     return Results.Json(petsFile);
 })
-.WithName("Pets")
+.WithName("GetAllPets")
 .WithOpenApi(generatedOperation =>
 {
     generatedOperation.Description = "Gets the list of pets available in El Bruno's Pet catalog.";
@@ -78,70 +80,26 @@ app.MapGet("/pets", () =>
 });
 
 // add a new pet
-app.MapPut("/petadd", (string name, string type, string breed, int age, string color, int weight, string owner_name, string owner_email, string owner_phone) =>
+app.MapPost("/AddPet", async (Root newPet) =>
 {
+    Console.WriteLine($"ADDPET / ADD PET info: {newPet.name}");
     var petsFile = File.ReadAllText("data/pets.json");
-
-    // deserialize the json file using root class
     var pets = JsonSerializer.Deserialize<List<Root>>(petsFile);
-
-    // create a new pet object
-    var newPet = new Root
-    {
-        name = name,
-        type = type,
-        breed = breed,
-        age = age,
-        color = color,
-        weight = weight,
-        owner = new Owner
-        {
-            name = owner_name,
-            email = owner_email,
-            phone = owner_phone
-        }
-    };
-
-    // add the pet to the list
     pets.Add(newPet);
-
-    // save the list back to the json file
     petsFile = JsonSerializer.Serialize(pets);
     File.WriteAllText("data/pets.json", petsFile);
-
-    // return sucessful operation
     return Results.Ok();
 })
-.WithName("PetAdd")
+.WithName("AddPet")
 .WithOpenApi(generatedOperation =>
 {
-
-    // generate operation parameters based on (string name, string type, string breed, int age, string color, int weight, string owner_name, string owner_email, string owner_phone)
-
-    var parameter = generatedOperation.Parameters[0];
-    parameter.Description = "The name of the Pet";
-    parameter = generatedOperation.Parameters[1];
-    parameter.Description = "The type of the Pet";
-    parameter = generatedOperation.Parameters[2];
-    parameter.Description = "The breed of the Pet";
-    parameter = generatedOperation.Parameters[3];
-    parameter.Description = "The age of the Pet";
-    parameter = generatedOperation.Parameters[4];
-    parameter.Description = "The color of the Pet";
-    parameter = generatedOperation.Parameters[5];
-    parameter.Description = "The weight of the Pet";
-    parameter = generatedOperation.Parameters[6];
-    parameter.Description = "The Pet's owner name";
-    parameter = generatedOperation.Parameters[7];
-    parameter.Description = "The Pet's owner email";
-    parameter = generatedOperation.Parameters[8];
-    parameter.Description = "The Pet's owner phone";
-
-    generatedOperation.Description = "Add a new pet to the pet catalog available in El Bruno's Pet catalog.";
+    generatedOperation.Parameters[0].Description = "The Pet information in Json format";
+    generatedOperation.Description = "Add a new pet to the pet catalog available in El Bruno's Pet catalog. Requires pet and pet's owner information.";
     return generatedOperation;
 });
 
 app.Run();
+
 
 public class Owner
 {

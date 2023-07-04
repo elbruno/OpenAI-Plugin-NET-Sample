@@ -9,7 +9,7 @@
         "owner": {
             "name": "Bruno Capuano",
             "email": "bruno@elbruno.com",
-            "phone": "+1-555-123-4567"
+            "phone": "1-555-123-4567"
         }
     },
     {
@@ -22,9 +22,9 @@
         "owner": {
             "name": "Bruno Capuano",
             "email": "bruno@elbruno.com",
-            "phone": "+1-555-123-4567"
+            "phone": "1-555-123-4567"
         }
-    },    
+    },
     {
         "name": "Max",
         "type": "dog",
@@ -35,7 +35,7 @@
         "owner": {
             "name": "John Doe",
             "email": "johndoe@example.com",
-            "phone": "+1-555-123-4567"
+            "phone": "1-555-123-4567"
         }
     },
     {
@@ -48,7 +48,7 @@
         "owner": {
             "name": "Jane Smith",
             "email": "janesmith@example.com",
-            "phone": "+1-555-987-6543"
+            "phone": "1-555-987-6543"
         }
     },
     {
@@ -61,7 +61,7 @@
         "owner": {
             "name": "Michael Johnson",
             "email": "michael@example.com",
-            "phone": "+1-555-234-5678"
+            "phone": "1-555-234-5678"
         }
     }
 ]
