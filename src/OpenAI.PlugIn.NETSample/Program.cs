@@ -21,10 +21,18 @@ builder.Services.AddSwaggerGen(options =>
     options.EnableAnnotations();
     options.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "El Bruno Pet Search",
+        Title = "El Bruno Pet Store",
         Version = "v1",
-        Description = "Search through El Bruno's wide range of pets."
+        Description = "View El Bruno's Pets store information.",
+        Contact = new OpenApiContact
+        {
+            Name = "El Bruno",
+            Email = "elbruno@elbruno.com",
+            Url = new Uri("https://elbruno.com/")
+        }
     });
+    var xmlFilename = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
 var app = builder.Build();
@@ -66,7 +74,7 @@ app.MapGet("/.well-known/ai-plugin.json", (HttpRequest request) =>
 .ExcludeFromDescription(); // exclude from swagger description;
 
 // return the list of pets
-app.MapGet("/getallpets", () =>
+app.MapGet("/GetAllPets", () =>
 {
     Console.WriteLine("GET ALL PETS");
     var petsFile = File.ReadAllText("data/pets.json");
@@ -82,7 +90,7 @@ app.MapGet("/getallpets", () =>
 // add a new pet
 app.MapPost("/AddPet", async (Root newPet) =>
 {
-    Console.WriteLine($"ADDPET / ADD PET info: {newPet.name}");
+    Console.WriteLine($"ADDPET / PET info: {newPet.name}");
     var petsFile = File.ReadAllText("data/pets.json");
     var pets = JsonSerializer.Deserialize<List<Root>>(petsFile);
     pets.Add(newPet);
@@ -93,7 +101,6 @@ app.MapPost("/AddPet", async (Root newPet) =>
 .WithName("AddPet")
 .WithOpenApi(generatedOperation =>
 {
-    generatedOperation.Parameters[0].Description = "The Pet information in Json format";
     generatedOperation.Description = "Add a new pet to the pet catalog available in El Bruno's Pet catalog. Requires pet and pet's owner information.";
     return generatedOperation;
 });
@@ -101,20 +108,56 @@ app.MapPost("/AddPet", async (Root newPet) =>
 app.Run();
 
 
+/// <summary>
+/// Pet Owner information
+/// </summary>
 public class Owner
 {
+    /// <summary>
+    /// Owner name
+    /// </summary>
     public string name { get; set; }
+    /// <summary>
+    /// Owner email
+    /// </summary>
     public string email { get; set; }
+    /// <summary>
+    /// Owner phone
+    /// </summary>
     public string phone { get; set; }
 }
 
+/// <summary>
+/// Pet information
+/// </summary>
 public class Root
 {
+    /// <summary>
+    /// Pet name
+    /// </summary>
     public string name { get; set; }
+    /// <summary>
+    /// Pet type
+    /// </summary>
     public string type { get; set; }
+    /// <summary>
+    /// Pet breed
+    /// </summary>
     public string breed { get; set; }
+    /// <summary>
+    /// Pet age
+    /// </summary>
     public int age { get; set; }
+    /// <summary>
+    /// Pet color
+    /// </summary>
     public string color { get; set; }
+    /// <summary>
+    /// Pet weight
+    /// </summary>
     public int weight { get; set; }
+    /// <summary>
+    /// Pet owner
+    /// </summary>
     public Owner owner { get; set; }
 }
