@@ -1,5 +1,9 @@
 # OpenAI ChatGPT Plugin - NET Pets Sample
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](/LICENSE)
+[![Twitter: elbruno](https://img.shields.io/twitter/follow/elbruno.svg?style=social)](https://twitter.com/elbruno)
+![GitHub: elbruno](https://img.shields.io/github/followers/elbruno?style=social)
+
 _Create, customize and deploy your own ChatGPT PlugIn in minutes._ ✨
 
 This is a quickstart for sample for creating [ChatGPT Plugin](https://openai.com/blog/chatgpt-plugins) programing in NET, using GitHub Codespaces, VS Code, and Azure. 
@@ -81,3 +85,31 @@ You can use the following prompts to test the plugin in ChatGPT:
 - OK, let's add a new pet. His name is Net, is a calico breed, 17-year-old brown cat. He weighs 3 kilograms. His owner is Bruno Capuano, with the same owner information that you have in the database.
 - Who owns the oldest Pet?
 - Who has more than one pet?
+
+## Author
+
+👤 **Bruno Capuano**
+
+* Website: https://elbruno.com
+* Twitter: [@elbruno](https://twitter.com/elbruno)
+* Github: [@elbruno](https://github.com/elbruno)
+* LinkedIn: [@elbruno](https://linkedin.com/in/elbruno)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check [issues page](https://github.com/elbruno/OpenAI-Plugin-NET-Sample/issues).
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+
+## 📝 License
+
+Copyright &copy; 2023 [Bruno Capuano](https://github.com/elbruno).
+
+This project is [MIT](/LICENSE) licensed.
+
+***
