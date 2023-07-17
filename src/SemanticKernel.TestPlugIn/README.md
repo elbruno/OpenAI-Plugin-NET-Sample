@@ -73,11 +73,20 @@ Configure an Azure OpenAI endpoint
 ## Running the sample
 Before running the sample, make sure you have the [OpenAI.PlugIn.NETSample](../OpenAI.PlugIn.NETSample/) running locally.
 
-To run the console application just hit `F5`.
+To run the console application just hit `bashTo build and run the console application from the terminal use the following commands:
 
-To build and run the console application from the terminal use the following commands:
-
-```powershell
+```powershBefore running the sample, make sure you have the [OpenAI.PlugIn.NETSample](../OpenAI.PlugIn.NETSample/) running bash
 dotnet build
 dotnet run
+```
+
+For the question "***How many cats are in the db?***", the console output should look like this:
+
+```bash
+Microsoft.SemanticKernel.Kernel: Debug: Response : [FINAL ANSWER]
+There are two cats in the El Bruno's Pet catalog: Ace (a Calico) and Whiskers (a Persian).
+Microsoft.SemanticKernel.Kernel: Information: Final Answer: There are two cats in the El Bruno's Pet catalog: Ace (a Calico) and Whiskers (a Persian).
+Result: There are two cats in the El Bruno's Pet catalog: Ace (a Calico) and Whiskers (a Persian).
+Steps Taken: 4
+Skills Used: 1 (PetsPlugin.GetAllPets(1))
 ```

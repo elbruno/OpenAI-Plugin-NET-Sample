@@ -26,7 +26,7 @@ var petsPlugin = await kernel.ImportChatGptPluginSkillFromUrlAsync("PetsPlugin",
 
 // Create a stepwise planner and invoke it
 var planner = new StepwisePlanner(kernel);
-var question = "How many cats are in the db? ";
+var question = "How many cats are in the db?";
 var plan = planner.CreatePlan(question);
 var result = await plan.InvokeAsync(kernel.CreateNewContext());
 

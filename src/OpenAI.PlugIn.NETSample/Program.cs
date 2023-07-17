@@ -32,10 +32,10 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
     // add servers to swagger, this is needed if testing with the Semantic Kernel Console App
-    // options.AddServer(new OpenApiServer
-    // {
-    //     Url = "http://localhost:5100"
-    // });
+    options.AddServer(new OpenApiServer
+    {
+        Url = "http://localhost:5100"
+    });
     var xmlFilename = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
