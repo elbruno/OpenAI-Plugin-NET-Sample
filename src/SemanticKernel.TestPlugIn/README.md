@@ -1,6 +1,6 @@
 # Creating and using a ChatGPT plugin
 
-The `SemanticKernel.TestPlugIn` console application is bazsed on the [ChatGPT plugin](https://learn.microsoft.com/en-us/semantic-kernel/ai-orchestration/chatgpt-plugins) doc article.
+The `SemanticKernel.TestPlugIn` console application is based on the [ChatGPT plugin](https://learn.microsoft.com/en-us/semantic-kernel/ai-orchestration/chatgpt-plugins) doc article.
 
 We can use this sample to test the ChatGPT Plugin [El Bruno Pets](../OpenAI.PlugIn.NETSample/).
 

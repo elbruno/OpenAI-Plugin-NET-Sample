@@ -6,21 +6,22 @@
 
 _Create, customize and deploy your own ChatGPT PlugIn in minutes._ ✨
 
-This is a quickstart for sample for creating [ChatGPT Plugin](https://openai.com/blog/chatgpt-plugins) programing in NET, using GitHub Codespaces, VS Code, and Azure. 
+This is a quickstart for sample for creating [ChatGPT Plugin](https://openai.com/blog/chatgpt-plugins) programing in NET, using GitHub Codespaces, Visual Studio Code, and Azure. 
 
-To gain access to ChatGPT plugins, [join waitlist here](https://openai.com/waitlist/plugins)!
+In order to test the plugin you need access to the ChatGPT plugins developer program. To gain access to ChatGPT plugins, [join waitlist here](https://openai.com/waitlist/plugins)!
+
+To test the ChatGPT plugin without using ChatGPT, you can use the [SemanticKernel.TestPlugIn](../SemanticKernel.TestPlugIn/README.md) console application.
 
 ## Getting started
 
 1. **📤 One-click setup**: [Open a new Codespace](https://codespaces.new/azure-samples/openai-plugin-fastapi), giving you a fully configured cloud developer environment.
-2. **🪄 Make an API**: 
-    
-    Add routes in `src/OpenAI.PlugIn.NETSample/Program.cs`.     
+1. **🪄 Make an API**: Add routes in `src/OpenAI.PlugIn.NETSample/Program.cs`. 
     Check [Route Handlers in Minimal API apps](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/route-handlers?view=aspnetcore-7.0) for more information.
 
-3. **▶️ Run, one-click again**: Use VS Code's built-in *Run* command and open the forwarded port *5001* in your browser.
-4. **💬 Test in ChatGPT**: Copy the URL (make sure its public) and paste it in ChatGPT's [Develop your own plugin](https://platform.openai.com/docs/plugins/getting-started/debugging) flow. Check the prompts example section below.  
-5. **🔄 Iterate quickly:** Codespaces updates the server on each save, and VS Code's debugger lets you dig into the code execution.
+1. **▶️ Run, one-click again**: Use VS Code's built-in *Run* command and open the forwarded port *5001* in your browser.
+1. **💬 Test in ChatGPT**: Copy the URL (make sure its public) and paste it in ChatGPT's [Develop your own plugin](https://platform.openai.com/docs/plugins/getting-started/debugging) flow. Check the prompts example section below.  
+1. **💬 Test using Semantic Kernel**: Copy the URL (make sure its public) and update the code in the [SemanticKernel.TestPlugIn](../SemanticKernel.TestPlugIn/README.md) console application. Run the app using the prompts example section below.  
+1. **🔄 Iterate quickly:** Codespaces updates the server on each save, and VS Code's debugger lets you dig into the code execution.
 
 ## Run Local
 1. Open `src/OpenAI.PlugIn.NETSample/Program.cs`. Press [F5] To Start Debugging. Choose your prefered Debugger.
