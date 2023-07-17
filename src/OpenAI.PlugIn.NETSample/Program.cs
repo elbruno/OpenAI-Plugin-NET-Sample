@@ -31,11 +31,11 @@ builder.Services.AddSwaggerGen(options =>
             Url = new Uri("https://elbruno.com/")
         }
     });
-    // add servers to swagger
-    options.AddServer(new OpenApiServer
-    {
-        Url = "http://localhost:5100"
-    });
+    // add servers to swagger, this is needed if testing with the Semantic Kernel Console App
+    // options.AddServer(new OpenApiServer
+    // {
+    //     Url = "http://localhost:5100"
+    // });
     var xmlFilename = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
