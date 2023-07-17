@@ -1,5 +1,5 @@
 {
-    "dotnet.defaultSolution": "src\\OpenAI.PlugIn.sln",
+    "dotnet.defaultSolution": "src/OpenAI.PlugIn.NETSample.sln",
     "dotnet.enablePackageRestore": true,
     "dotnet.useEditorCompletions": true,
     "dotnet.useGlobalJson": true,
