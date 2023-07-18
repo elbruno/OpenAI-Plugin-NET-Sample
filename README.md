@@ -10,7 +10,8 @@ This is a quickstart for sample for creating [ChatGPT Plugin](https://openai.com
 
 In order to test the plugin you need access to the ChatGPT plugins developer program. To gain access to ChatGPT plugins, [join waitlist here](https://openai.com/waitlist/plugins)!
 
-To test the ChatGPT plugin without using ChatGPT, you can use the [SemanticKernel.TestPlugIn](../SemanticKernel.TestPlugIn/README.md) console application.
+
+Since there is currently a waitlist for creating plugins for ChatGPT, we'll also demonstrate how you can test the Pets plugin with [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/overview/). The [SemanticKernel TestPlugIn Console App](src/SemanticKernel.TestPlugIn/README.md) is a sample demo to test a plugin without using ChatGPT and using Azure OpenAI Services or OpenAI APIs.
 
 ## Getting started
 
