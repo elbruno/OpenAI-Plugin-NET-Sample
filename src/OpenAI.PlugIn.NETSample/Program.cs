@@ -12,6 +12,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAll", policy =>
     {
         policy.WithOrigins("https://chat.openai.com", "http://localhost:5100").AllowAnyHeader().AllowAnyMethod();
+        policy.WithOrigins("http://localhost:3000", "http://localhost:5100").AllowAnyHeader().AllowAnyMethod();
     });
 });
 

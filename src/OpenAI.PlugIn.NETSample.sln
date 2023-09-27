@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAI.PlugIn.NETSample", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SemanticKernel.TestPlugIn", "SemanticKernel.TestPlugIn\SemanticKernel.TestPlugIn.csproj", "{707090D1-7C05-4854-AA46-E99B43E60CFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAI.PlugIn.NETSampleHealthcare", "OpenAI.PlugIn.NETSampleHealthcare\OpenAI.PlugIn.NETSampleHealthcare.csproj", "{85E950C4-F6A3-48ED-9714-A49625D52301}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{707090D1-7C05-4854-AA46-E99B43E60CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{707090D1-7C05-4854-AA46-E99B43E60CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{707090D1-7C05-4854-AA46-E99B43E60CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85E950C4-F6A3-48ED-9714-A49625D52301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85E950C4-F6A3-48ED-9714-A49625D52301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85E950C4-F6A3-48ED-9714-A49625D52301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85E950C4-F6A3-48ED-9714-A49625D52301}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

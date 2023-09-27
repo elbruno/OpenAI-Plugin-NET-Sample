@@ -1,0 +1,48 @@
+[
+    {
+        "name": "Dr. John Doe",
+        "location": "123 Main St, Springfield, IL",
+        "phone": "555-1234",
+        "email": "john.doe@example.com",
+        "appointments": [
+            {
+                "date": "2023-10-03",
+                "time": "09:00 AM",
+                "extraServices": ["X-ray", "Blood Test"]
+            },
+            {
+                "date": "2023-10-04",
+                "time": "10:00 AM",
+                "extraServices": []
+            },
+            {
+                "date": "2023-10-05",
+                "time": "11:00 AM",
+                "extraServices": ["Blood Test"]
+            }
+        ]
+    },
+    {
+        "name": "Dr. Jane Smith",
+        "location": "456 Elm St, Springfield, IL",
+        "phone": "555-5678",
+        "email": "jane.smith@example.com",
+        "appointments": [
+            {
+                "date": "2023-10-03",
+                "time": "02:00 PM",
+                "extraServices": []
+            },
+            {
+                "date": "2023-10-04",
+                "time": "03:00 PM",
+                "extraServices": ["X-ray"]
+            },
+            {
+                "date": "2023-10-05",
+                "time": "04:00 PM",
+                "extraServices": []
+            }
+        ]
+    }
+]
