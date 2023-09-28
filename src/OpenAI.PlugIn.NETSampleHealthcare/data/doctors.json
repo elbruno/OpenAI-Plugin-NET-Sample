@@ -26,7 +26,7 @@
                 ]
             }
         ],
-        "healthcareProviders": [
+        "healthcareInsuranceProviders": [
             "DentalAI"
         ]
     },
@@ -54,7 +54,7 @@
                 "extraServices": []
             }
         ],
-        "healthcareProviders": [
+        "healthcareInsuranceProviders": [
             "DentalAI",
             "ContosoHealth"
         ]
