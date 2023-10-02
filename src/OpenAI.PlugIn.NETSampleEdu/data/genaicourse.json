@@ -1,0 +1,68 @@
+[
+    {
+        "university": "Contoso University of Madrid",
+        "course": {
+            "title": "Generative AIs",
+            "code": "AI102",
+            "description": "This course explores the principles, algorithms, and applications of generative artificial intelligence. Students will learn about various generative models, including Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and more, and their applications in image generation, style transfer, and data augmentation.",
+            "professor": {
+                "name": "Dr. Maria Gonzalez",
+                "email": "m.gonzalez@contoso.edu",
+                "office_hours": "Tuesdays and Thursdays, 14:00 - 16:00"
+            },
+            "agenda": {
+                "October": [
+                    {
+                        "date": "2023-10-01",
+                        "topic": "Introduction to Generative AIs",
+                        "time": "10:00 - 12:00"
+                    },
+                    {
+                        "date": "2023-10-08",
+                        "topic": "Deep Learning Basics",
+                        "time": "10:00 - 12:00"
+                    },
+                    {
+                        "date": "2023-10-15",
+                        "topic": "Generative Adversarial Networks (GANs)",
+                        "time": "10:00 - 12:00"
+                    }
+                ],
+                "November": [
+                    {
+                        "date": "2023-11-05",
+                        "topic": "Variational Autoencoders (VAEs)",
+                        "time": "10:00 - 12:00"
+                    },
+                    {
+                        "date": "2023-11-12",
+                        "topic": "Applications of Generative AIs",
+                        "time": "10:00 - 12:00"
+                    },
+                    {
+                        "date": "2023-11-19",
+                        "topic": "Ethical Considerations in AI",
+                        "time": "10:00 - 12:00"
+                    }
+                ],
+                "December": [
+                    {
+                        "date": "2023-12-03",
+                        "topic": "Project Presentations",
+                        "time": "10:00 - 12:00"
+                    },
+                    {
+                        "date": "2023-12-10",
+                        "topic": "Course Review",
+                        "time": "10:00 - 12:00"
+                    },
+                    {
+                        "date": "2023-12-17",
+                        "topic": "Final Exam",
+                        "time": "10:00 - 12:00"
+                    }
+                ]
+            }
+        }
+    }
+]

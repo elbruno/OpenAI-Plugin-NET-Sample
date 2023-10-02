@@ -11,8 +11,8 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
     {
-        policy.WithOrigins("https://chat.openai.com", "http://localhost:5178").AllowAnyHeader().AllowAnyMethod();
-        policy.WithOrigins("http://localhost:3000", "http://localhost:5178").AllowAnyHeader().AllowAnyMethod();
+        policy.WithOrigins("https://chat.openai.com", "http://localhost:5142").AllowAnyHeader().AllowAnyMethod();
+        //policy.WithOrigins("http://localhost:3000", "http://localhost:5142").AllowAnyHeader().AllowAnyMethod();
     });
 });
 
@@ -22,9 +22,9 @@ builder.Services.AddSwaggerGen(options =>
     options.EnableAnnotations();
     options.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "El Bruno Doctors' Appointments API",
+        Title = "Contoso University Madrid API",
         Version = "v1",
-        Description = "View El Bruno's Doctors' Appointments information.",
+        Description = "View Contoso University Madrid API information.",
         Contact = new OpenApiContact
         {
             Name = "El Bruno",
@@ -33,10 +33,10 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
     // add servers to swagger, this is needed if testing with the Semantic Kernel Console App
-    options.AddServer(new OpenApiServer
-    {
-        Url = "http://localhost:5178"
-    });
+    // options.AddServer(new OpenApiServer
+    // {
+    //     Url = "http://localhost:5142"
+    // });
     var xmlFilename = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
@@ -79,22 +79,32 @@ app.MapGet("/.well-known/ai-plugin.json", (HttpRequest request) =>
 })
 .ExcludeFromDescription(); // exclude from swagger description;
 
-// return the list of doctors
-app.MapGet("/GetAlldoctors", () =>
+// return information about the Contoso University of Madrid
+app.MapGet("/GetContosoUniversityInformation", () =>
 {
-    Console.WriteLine("Debug: GET ALL DOCTORS");
-    var doctorsFile = File.ReadAllText("data/doctors.json");
+    Console.WriteLine("GET Contoso University of Madrid information");
+    var doctorsFile = File.ReadAllText("data/universityinformation.json");
     return Results.Json(doctorsFile);
 })
-.WithName("GetAlldoctors")
+.WithName("GetContosoUniversityInformation")
 .WithOpenApi(generatedOperation =>
 {
-    generatedOperation.Description = "Gets the list of doctors available in El Bruno's Doctors' Appointments catalog.";
+    generatedOperation.Description = "Gets information about the Contoso University of Madrid";
     return generatedOperation;
 });
 
-// return a doctor by name
-
-
+// return information about the Generative AI Course
+app.MapGet("/GetGenerativeAICourseInformation", () =>
+{
+    Console.WriteLine("Debug: GET Generative AI information");
+    var doctorsFile = File.ReadAllText("data/genaicourse.json");
+    return Results.Json(doctorsFile);
+})
+.WithName("GetGenerativeAIInformation")
+.WithOpenApi(generatedOperation =>
+{
+    generatedOperation.Description = "Gets information about the Generative AI course";
+    return generatedOperation;
+});
 
 app.Run();

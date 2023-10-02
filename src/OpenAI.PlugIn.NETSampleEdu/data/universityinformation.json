@@ -1,0 +1,60 @@
+[
+    {
+        "university": {
+            "name": "Contoso University of Madrid",
+            "contact": {
+                "address": "123 Main St, Madrid, Spain",
+                "phone": "+34 123 456 789",
+                "email": "info@contosouniversity.es",
+                "website": "http://www.contosouniversity.es"
+            },
+            "history": {
+                "foundingYear": 1901,
+                "founder": "John Contoso",
+                "milestones": [
+                    {
+                        "year": 1901,
+                        "event": "University was founded by John Contoso."
+                    },
+                    {
+                        "year": 1950,
+                        "event": "The university expanded its campus, adding three new buildings."
+                    },
+                    {
+                        "year": 2000,
+                        "event": "Introduction of online degree programs."
+                    },
+                    {
+                        "year": 2020,
+                        "event": "Celebrated 119 years of educational excellence."
+                    }
+                ]
+            },
+            "aboutUs": {
+                "mission": "To empower students to achieve their full potential through a rich educational experience.",
+                "vision": "To be a global leader in higher education, research, and innovation.",
+                "values": [
+                    "Excellence",
+                    "Integrity",
+                    "Inclusivity",
+                    "Innovation",
+                    "Sustainability"
+                ],
+                "departments": [
+                    {
+                        "name": "Computer Science",
+                        "head": "Dr. Maria Gonzalez"
+                    },
+                    {
+                        "name": "Business Administration",
+                        "head": "Dr. Carlos Rodriguez"
+                    },
+                    {
+                        "name": "Biotechnology",
+                        "head": "Dr. Ana Fernandez"
+                    }
+                ]
+            }
+        }
+    }
+]
