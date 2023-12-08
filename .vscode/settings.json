@@ -8,6 +8,6 @@
     "editor.formatOnType": true,
     "editor.formatOnPaste": true,
     "editor.suggestSelection": "first",
-    "editor.wordBasedSuggestions": false,
+    "editor.wordBasedSuggestions": "off",
     "editor.snippetSuggestions": "top",
 }
